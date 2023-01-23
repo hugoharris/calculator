@@ -21,3 +21,22 @@ const deleteBtn = document.querySelector('.delete');
 const decimalBtn = document.querySelector('.decimal');
 const equalsBtn = document.querySelector('.equals');
 
+// functions
+function resetScreen() {
+    screenDisplay = 0;
+    updateScreen(screenDisplay);
+}
+
+function updateScreen(screenDisplay) {
+    screen.innerHTML = `<p>${screenDisplay}</p>`
+}
+
+// set default variables
+let screenDisplay = 0;
+let currentNum = 0;
+
+// reset screen on first run
+resetScreen();
+
+// event listeners
+

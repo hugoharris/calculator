@@ -27,6 +27,14 @@ body {
     grid-column: 1 / 5;
     background-color: #cccccc;
     border: 1px solid black;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.screen p {
+    padding: 1rem;
+    font-size: 3rem;
 }
 
 .clear {
