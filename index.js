@@ -30,6 +30,11 @@ function calculateAnswer(passedInArray) {
 
 function handleNumberClick(numStr) {
     const calcStr = calcArray[calcArray.length - 1];
+    if (equalsToggle === true) {
+        equalsToggle = false;
+        calcArray = [];
+        resetScreen();
+    }
     if (calcStr === "+" || calcStr === "-" || calcStr === "/" || calcStr === "*") {
         if (calcArrayToggle === true) {
             calcArrayToggle = false;
@@ -48,6 +53,7 @@ function handleNumberClick(numStr) {
 }
 
 function handleOperatorClick(op) {
+    equalsToggle = false;
     if (calcArrayToggle === false) {
         calcArray.push(currentNum);
         calcArray.push(op);
@@ -73,6 +79,7 @@ let screenDisplay = '0';
 let currentNum = 0;
 let calcArray =[];
 let calcArrayToggle = false;
+let equalsToggle = false;
 const maxCharLength = 12;
 
 // reset screen on first run
@@ -146,9 +153,11 @@ equalsBtn.addEventListener('click', () => {
     } else {
         calcArray.push(currentNum);
         const answer = calculateAnswer(calcArray);
-        screenDisplay = answer;
+        screenDisplay = answer.toString();
         currentNum = Number(screenDisplay);
         calcArray = [];
+        calcArrayToggle = false;
+        equalsToggle = true;
         updateScreen(screenDisplay);
     }
 });

@@ -14,6 +14,14 @@ body {
     background-color: #cc8800;
 }
 
+header {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+
 .calculator {
     padding: 1rem;
     margin: 4rem auto;
@@ -26,6 +34,8 @@ body {
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
     background-color: #eeeeee;
+    font-family: "Roboto Mono";
+    font-weight: 600;
 }
 
 .screen {
