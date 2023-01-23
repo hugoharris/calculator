@@ -6,6 +6,7 @@
 body {
     box-sizing: border-box;
     font-family: sans-serif;
+    background-color: #cc8800;
 }
 
 .calculator {
@@ -19,11 +20,13 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1rem;
+    background-color: #eeeeee;
 }
 
 .screen {
     grid-column: 1 / 5;
     background-color: #cccccc;
+    border: 1px solid black;
 }
 
 .clear {
