@@ -58,7 +58,6 @@ function handleOperatorClick(op) {
         calcArray.push(currentNum);
         calcArray.push(op);
         calcArrayToggle = true;
-        console.log(calcArray);
         currentNum = 0;
     }
 }
@@ -72,11 +71,9 @@ function resetScreen() {
 function updateScreen(screenDisplay) {
     if (screenDisplay.length > 9 && equalsToggle === true) {
         exponentialDisplay = (Number(screenDisplay)).toExponential(5).toString();
-        console.log(exponentialDisplay);
         screen.innerHTML = `<p>${exponentialDisplay}</p>`
     } else {
         screen.innerHTML = `<p>${screenDisplay}</p>`
-        console.log(calcArray, currentNum);
     }
 }
 

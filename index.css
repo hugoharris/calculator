@@ -3,11 +3,6 @@
     padding: 0;
 }
 
-::selection {
-    color: none;
-    background-color: inherit;
-}
-
 body {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -20,6 +15,10 @@ header {
     font-size: 2rem;
     text-align: center;
     margin: 2rem;
+}
+
+header h1 {
+    text-shadow: 10px 10px 8px #555555;
 }
 
 .calculator {
@@ -36,6 +35,8 @@ header {
     background-color: #eeeeee;
     font-family: "Roboto Mono";
     font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 2px;
 }
 
 .screen {
@@ -59,6 +60,7 @@ header {
     align-items: center;
     background-color: #dd6600;
     border-radius: 8px;
+    transition: font-size 0.2s;
 }
 
 .delete {
@@ -68,6 +70,7 @@ header {
     align-items: center;
     background-color: #0066ff;
     border-radius: 8px;
+    transition: font-size 0.2s;
 }
 
 .btn {
@@ -76,4 +79,23 @@ header {
     align-items: center;
     background-color: #88aa11;
     border-radius: 8px;
+    transition: font-size 0.2s;
+}
+
+.btn:active, .clear:active, .delete:active {
+    font-size: 1.4rem;
+    transition: font-size 0.2s;
+    box-shadow: 2px 2px 2px;
+}
+
+.clear::selection {
+    background-color: #dd6600;
+}
+
+.delete::selection {
+    background-color: #0066ff;
+}
+
+.btn::selection {
+    background-color: #88aa11;
 }
