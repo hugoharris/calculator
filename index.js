@@ -70,8 +70,14 @@ function resetScreen() {
 }
 
 function updateScreen(screenDisplay) {
-    screen.innerHTML = `<p>${screenDisplay}</p>`
-    console.log(calcArray, currentNum);
+    if (screenDisplay.length > 9 && equalsToggle === true) {
+        exponentialDisplay = (Number(screenDisplay)).toExponential(5).toString();
+        console.log(exponentialDisplay);
+        screen.innerHTML = `<p>${exponentialDisplay}</p>`
+    } else {
+        screen.innerHTML = `<p>${screenDisplay}</p>`
+        console.log(calcArray, currentNum);
+    }
 }
 
 // set default variables
